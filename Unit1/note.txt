@@ -1,0 +1,28 @@
+1. To check if you have Aneconda:
+$ conda --version
+2. To check if it is on your path:
+$ echo $PATH
+3. To install a package using conda:
+$ conda install <package_name>
+4. To check to see if you have a package installed in conda:
+$ conda list <package_name>
+5. A boiler plate:
+if __name__ == "__main__":
+    hello_world()
+basically says, only run this code if the file is being directly run
+from the command line, as opposed to being imported as a module
+6. Interactive Debugging:
+if __name__ == "__main__":
+  hello_world()
+  a = 22
+  import pdb
+  pdb.set_trace()
+  b = 33
+  print add_em_up(3, 4, 5)
+pdb.set_trace() opens up an interactive debugger just after it is
+called; the code is paused right at that line. a is defined and has
+the value 22. b is not defined yet.
+To go to the next line we use "n".
+7. Init git after creating a directory:
+Just stay in the directory, and do:
+ziru@<new directory> $ git init

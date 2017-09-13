@@ -1,0 +1,81 @@
+Python:
+1. The purpose of "pass":
+Python has the syntactical requirement that code blocks (after if, except,
+def, class etc.) cannot be empty. So if nothing is supposed to happen in a
+code block, a pass is needed for such a block to not produce an "IndentationError".
+2. iPython: "_":
+Use _ for a variable containing the result of the last executed command.
+In [1]: 9 * 54
+Out[1]: 486
+
+In [2]: _
+Out[2]: 486
+
+In [3]: x = _
+
+In [4]: x
+Out[4]: 486
+3. Generator
+1) For list looping:
+range() vs <Generator>xrange()
+Since xrange() only provides the next element, the use case is: need to access only one element at a time in order
+BUT, if un-ordered access is needed, or multiple elements are accessed at
+the same time, Generator cannot do
+2) For dictionary looping:
+items() vs <Generator>iteritems()
+4. Get list index while looping:
+for i, item in enumerate(L):
+    print i, item
+(using i in xrange(len(L)) is bad practice)
+5. zip():
+first_names = ['Giovanna', 'Ryan', 'Jon']
+last_names = ['Thron', 'Orban', 'Dinu']
+zip(first_names, last_names)
+Output: [('Giovanna', 'Thron'), ('Ryan', 'Orban'), ('Jon', 'Dinu')]
+6. If statements in list comprehensions:
+1)
+In [3]: L = [4, 6, 3, 2, 5]
+
+In [4]: ["even" if item % 2 == 0 else "odd" for item in L]
+Out[4]: ['even', 'even', 'odd', 'even', 'odd']
+2) as a filter:
+In [5]: L = [4, 6, 3, 2, 5]
+
+In [6]: [item for item in L if item % 2 == 0]
+Out[6]: [4, 6, 2]
+7. Lambda:
+list comprehension = map+lambda (they can do the same thing)
+8. Dictionary:
+1) Due to how a dictionary is stored (Dictionaries are an
+implementation of hash tables, like Java's hashmaps), there is no concept
+of order for elements in a dictionary
+2) Dict keys are not mutable
+3) Looping through a dictinary:
+- for k in d:
+- for k, v in d.iteritems():
+4) Counter and defaultdict:
+Counter and defaultdict have default values for keys that haven't been seen
+before. For a Counter, the default value will be 0. For a defaultdict, the
+default value will be dependent on what you give it.
+In [1]: from collections import Counter, defaultdict
+
+In [2]: c = Counter()
+
+In [3]: c['abc']
+Out[3]: 0
+
+In [4]: d = defaultdict(str)
+
+In [5]: d['abc']
+Out[5]: ''
+9. Sets:
+Sets are basically value-less dictionaries. If you have a list that you're going
+to be regularly checking membership of, you should be using a set.
+A set is also unordered.
+10. Mutable objects:
+-list
+-set
+-dictionary
+When passing a mutable object into a function, if the parameter is modified in the
+function, the original mutable object will also be modified!
+11.
