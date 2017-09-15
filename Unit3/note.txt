@@ -1,0 +1,11 @@
+Linear Algebra
+1. Vector:
+Vector has "dimension", [1,2,3,4] is 4 dimension
+2. Matrix:
+Matrix has "shape". shape = row x column (n x m)
+A "column vector" has shape n x 1, while a "row vector" has shape 1 x m.
+3. Inner product:
+If left-column(m1) == right-row(n2): inner product is possible
+result-row = left-row(n1)
+result-column = right column(m2)
+result shape = n1 x m2
