@@ -78,4 +78,68 @@ A set is also unordered.
 -dictionary
 When passing a mutable object into a function, if the parameter is modified in the
 function, the original mutable object will also be modified!
-11.
+11. Keyword arguments:
+def hello_word(name, mood='happy'):
+  return "Hello word, I am {0} and I am feeling {1}.".format(name, mood)
+
+print hello_word('John')
+print hello_word('Chen', 'on top of the world')
+12. sys.argv:
+sys.argv is automatically a list of strings representing the arguments
+(as separated by spaces) on the command-line.
+
+from __future__ import print_function
+import sys
+print(sys.argv, len(sys.argv))
+
+> python print_args.py
+out> ['print_args.py'] 1
+
+> python print_args.py foo and bar
+out> ['print_args.py', 'foo', 'and', 'bar'] 4
+
+> python print_args.py "foo and bar"
+out> ['print_args.py', 'foo and bar'] 2
+
+> python print_args.py "foo and bar" and baz
+out> ['print_args.py', 'foo and bar', 'and', 'baz'] 4
+
+13. strip():
+The method strip() returns a copy of the string in which
+all chars have been stripped from the beginning and the end
+of the string (default whitespace characters).
+Also:
+"The cat, chased the dog don't.".strip().strip(string.punctuation)
+14. Object-oriented:
+To combine data structures and functions together.
+15. Class:
+class Shape:
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+        self.description = "This shape has not been described yet"
+        self.author = "Nobody has claimed to make this shape yet"
+
+    def area(self):
+        return self.x * self.y
+
+    def perimeter(self):
+        return 2 * self.x + 2 * self.y
+
+    def describe(self, text):
+        self.description = text
+
+    def authorName(self, text):
+        self.author = text
+
+    def scaleSize(self, scale):
+        self.x = self.x * scale
+        self.y = self.y * scale
+- "__init__" is run when we create an instance of Shape
+- "self" is how we refer to things in the class from within itself. self is the
+first parameter in any function defined inside a class. Any function or variable
+created on the first level of indentation (that is, lines of code that start one
+TAB to the right of where we put class Shape) is automatically put into self. To
+access these functions and variables elsewhere inside the class, their name must
+be preceeded with self and a full-stop (e.g. self.variable_name).
