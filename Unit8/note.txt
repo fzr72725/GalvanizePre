@@ -1,0 +1,89 @@
+1. Null Hypothesis and Alternative Hypothesis
+- NH is to assume the variation of the sampling data is pure chance, aka, the sample data
+belong to the population
+- NA is the opposite, aka, the sample data is from a different population
+- NH and NA are mutually exclusive
+
+2. Hypothesis testing results:
+- you reject the null hypothesis
+- you fail to reject the null hypothesis (instead of you reject the null hypothesis)
+(reason being Acceptance implies that the null hypothesis is true. Failure to reject
+implies that the data are not sufficiently persuasive for us to prefer the alternative
+hypothesis over the null hypothesis)
+
+3. Hypothesis Testing Steps.
+
+- State the hypotheses. This involves stating the null and alternative hypotheses.
+The hypotheses are stated in such a way that they are mutually exclusive. That is,
+if one is true, the other must be false.
+
+- Formulate an analysis plan. The analysis plan describes how to use sample data
+to evaluate the null hypothesis. The evaluation often focuses around a single test statistic.
+
+- Analyze sample data. Find the value of the test statistic (mean score, proportion,
+t statistic, z-score, etc.) described in the analysis plan.
+
+- Interpret results. Apply the decision rule described in the analysis plan. If the value
+of the test statistic is unlikely, based on the null hypothesis, reject the null hypothesis
+
+4. Two types of errors
+- Type I error: when the researcher rejects a null hypothesis when it is true. The probability
+of committing a Type I error is called the "significance level". This probability is also called "alpha",
+and is often denoted by α.
+
+- Type II error: when the researcher fails to reject a null hypothesis
+that is false. The probability of committing a Type II error is called "Beta", and is often denoted
+by β. The probability of not committing a Type II error is called the "Power of the test".
+
+6. Decision Rules:
+- P-value:
+The strength of evidence in support of a null hypothesis is measured by the P-value.
+Suppose the test statistic is equal to S. The P-value is the probability of observing a test statistic
+as extreme as S, assuming the null hypothesis is true. If the P-value is less than the significance level,
+we reject the null hypothesis.
+
+- Region of acceptance:
+The region of acceptance is a range of values. If the test statistic falls
+within the region of acceptance, the null hypothesis is not rejected. The region of acceptance is
+defined so that the chance of making a Type I error is equal to the significance level.
+
+7. t-distribution:
+When the standard deviation of the sample is substituted for the standard deviation of the population,
+the statistic does not have a normal distribution; it has what is called the t‐distribution(see Table 3
+in "Statistics Tables"). Because there is a different t‐distribution for each sample size, it is not
+practical to list a separate area‐of ‐the‐curve table for each one. Instead, critical t‐values for
+common alpha levels (0.10, 0.05, 0.01, and so forth) are usually given in a single table for a range of
+sample sizes. For very large samples, the t‐distribution approximates the standard normal ( z)
+distribution. In practice, it is best to use t‐distributions any time the population standard deviation
+is not known.
+
+8. Degree of Freedom:
+Values in the t‐table are not actually listed by sample size but by degrees of freedom (df). The number
+of degrees of freedom for a problem involving the t‐distribution for sample size n is simply n – 1 for
+a one‐sample mean problem.
+
+9. one-tail or two-tail:
+- one tail example:
+The professor wants the class to be able to score above 70 on the test.
+null hypothesis: H 0: μ = 70
+alternative hypothesis: H a : μ > 70
+
+A 90 percent confidence level is equivalent to an alpha level of 0.10. Because extreme values in one
+rather than two directions will lead to rejection of the null hypothesis, this is a one‐tailed test,
+and you do not divide the alpha level by 2. The number of degrees of freedom for the problem is 6 – 1 = 5.
+The value in the t‐table for t .10,5 is 1.476.
+- two tail example:
+A Little League baseball coach wants to know if his team is representative of other teams in scoring runs.
+null hypothesis: H 0: μ = 5.7
+alternative hypothesis: H a : μ ≠ 5.7
+
+The overall alpha level is 0.05, but because this is a two‐tailed test, the alpha level must be divided by two,
+which yields 0.025. The tabled value for t .025,4 is 2.776.
+
+10. The t-statistic:
+The t-statistic(t score) is a ratio between the difference between two groups and the difference within the groups.
+
+11. Two-sample t test:
+- Purpose: To test if the means of two population are equal
+- Paired two-sample t test: there is a one-to-one correspondence between the values in the two samples
+- Unpaired two-sample t test: the size of two samples may or may not be equal
