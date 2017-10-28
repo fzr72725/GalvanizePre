@@ -58,14 +58,17 @@ def remove_outliers(lst):
     """
     INPUT: list of ints/floats
     RETURNS: two lists
-              - a list of all data points that fall either 3 times the IQR above Q3 or 3 times the IQR below Q1
+              - a list of all data points that fall either 3 times the IQR above Q3
+              or 3 times the IQR below Q1
               - a list of all remaining points
 
     """
-    iqr = np.percentile(lst,75)-np.percentile(lst,25)
-    l1 = [i for i in lst if (abs(i)>3*iqr)]
+    iqr = get_IQR(lst)
+    q1 = np.percentile(lst,25)
+    q3 = np.percentile(lst,75)
+    l1 = [i for i in lst if ((abs(i-q3)>3*iqr)|(abs(q1-i)>3*iqr))]
     l2 = [i for i in lst if i not in l1]
-    return l1, l2
+    return l1,l2
 
 if __name__ == '__main__':
     get_IQR(lst)
