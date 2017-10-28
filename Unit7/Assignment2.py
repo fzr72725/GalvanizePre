@@ -66,10 +66,9 @@ def get_sem(sample):
     - sem(FLOAT) [Standard Error Mean]
     """
     #population = load_pickle('/Users/ziru/GalvanizePre/data/population.pkl')
-    mean = get_mean(sample)
+    mean = float(sum(sample))/float(len(sample))
     r = [float((i-mean)**2) for i in sample]
-    #var = sum(r)/float(len(sample)-1)
-    var = get_variance(sample)
+    var = sum(r)/float(len(sample)-1)
     return var**0.5/len(sample)**0.5
 
 
