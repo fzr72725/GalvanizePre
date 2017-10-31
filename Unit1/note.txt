@@ -41,3 +41,9 @@ p: to print the value of an expression in the current context
 7. Init git after creating a directory:
 Just stay in the directory, and do:
 ziru@<new directory> $ git init
+
+8. Python sys path change:
+import sys
+print (sys.path)
+sys.path.append('/Library/Python/2.7/site-packages') # to add to the end of path
+sys.path.pop(0) # to remove the first element
